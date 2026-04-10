@@ -42,7 +42,7 @@ The source code of this component can be found here:
 
 Complete the [get started guide](../../../../gsg_robot/index.md) before continuing.
 
-Complete the [GMSL setup guide](../../../gmsl-guide/index.rst) before continuing.
+Complete the [GMSL setup guide](../../../gmsl-guide/index.md) before continuing.
 
 
 
