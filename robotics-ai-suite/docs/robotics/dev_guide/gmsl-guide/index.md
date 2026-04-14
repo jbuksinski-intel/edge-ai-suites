@@ -219,7 +219,6 @@ Below an ACPI devices configure example for [D3 Embedded Discovery PRO](https://
 **Note**
 On Advantech® AFE-R360 series the four D3CMCXXX ACPI configuration achieved by `PPR Unit=2` also requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
 
-
 <!--hide_directive
 :::
 
@@ -355,7 +354,7 @@ Below an ACPI devices configure example for [D3 Embedded Discovery](https://www.
 |Device2 I2C Address|10|12|
 
 **Note**
-please note, on Seavo® HB03 the four D3CMCXXX ACPI configuration achieved by `PPR Unit=2` also requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+On Seavo® HB03 the four D3CMCXXX ACPI configuration achieved by `PPR Unit=2` also requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
 
 <!--hide_directive
 :::
@@ -382,7 +381,7 @@ Below an ACPI devices configure example for [D3 Embedded Discovery PRO](https://
 |Device2 I2C Address|10|12|
 
 **Note**
-please note, on Seavo® HB03 four D3CMCXXX ACPI configuration achieved by `PPR Unit=2` also requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+On Seavo® HB03 four D3CMCXXX ACPI configuration achieved by `PPR Unit=2` also requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
 
 <!--hide_directive
 :::
@@ -438,15 +437,14 @@ Below an ACPI devices configure example for [oToBrite® oToCAM223](https://www.o
 :::{tab-item} hide_directive-->
 
 **Note**
-please note, GMSL2 *Aggregated-link* `SerDes` CSI-2 port 0 and 4 is purposely set to `LaneUsed = x4` to improve Intel® IPU6 DPHY signal-integrity problem on [SEAVO® Embedded Computer HB03](https://www.seavo.com/en/products/products-info_itemid_693.html) .
+GMSL2 *Aggregated-link* `SerDes` CSI-2 port 0 and 4 is purposely set to `LaneUsed = x4` to improve Intel® IPU6 DPHY signal-integrity problem on [SEAVO® Embedded Computer HB03](https://www.seavo.com/en/products/products-info_itemid_693.html) .
 
 ![gmsl seavo hb03](../../images/gmsl/gmsl-seavo-hb03.png)
 
-:::{attention}
+**Note**
 For the time being each GMSL2 **Aggregated-link** Deserializer (e.g. MAX9296A) on the same I2C Channel shall set identical *Custom HID* and *Camera module label* tuple matching with GMSL2 Serializer and Camera Sensor devices type.
 
 The [SEAVO® Embedded Computer HB03](https://www.seavo.com/en/products/products-info_itemid_693.html) Add-in-Cards (AIC) I2C1 Channel  (ex. `INTC10CD`) **Aggregated-link** Deserializer (e.g. MAX9296A) i2c device `0x48` shall set *Custom HID* (ex. `INTC10CD`) and *Camera module label* (ex `d4xx`) tuple for both *GMSL Camera suffix* `a` and `g`, where the other  **Aggregated-link** Deserializer (e.g. MAX9296A) i2c device `0x4a` could have a different *Custom HID* (ex `INTC1031`) and *Camera module* label (ex `isx031`) tuple on both GMSL Camera suffix `e` and `k`.
-:::
 
 <!--hide_directive
 :::
@@ -504,7 +502,7 @@ Below an ACPI devices configure example of four GMSL2 Camera module from [D3 Emb
 |Device2 I2C Address|12|14|16|18|
 
 **Note**
-please note, on the *Axiomtek® ROBOX500* the 4x D3CMCXXX Camera ACPI configuration is achieved by `PPR Unit=1` requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+On the *Axiomtek® ROBOX500* the 4x D3CMCXXX Camera ACPI configuration is achieved by `PPR Unit=1` requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
 
 <!--hide_directive
 :::
@@ -531,7 +529,7 @@ Below an ACPI devices configure example of four GMSL2 Camera module from [D3 Emb
 |Device2 I2C Address|12|14|16|18|
 
 **Note**
-please note, the D3CMCXXX ACPI configuration with `PPR Unit=2` requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+The D3CMCXXX ACPI configuration with `PPR Unit=2` requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
 
 <!--hide_directive
 :::
