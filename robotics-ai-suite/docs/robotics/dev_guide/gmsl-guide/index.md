@@ -136,15 +136,15 @@ To enable multiple GMSL Cameras for same or different vendors, user need define 
 
 Please refer to each tabs below to understand ODM hardware distinct ACPI Camera device configuration table :
 
+<!--hide_directive
 ::::{tab-set}
-
-:::{tab-item} Advantech® AFE-R360 & ASR-A502 series
+:::{tab-item} hide_directive--> Advantech® AFE-R360 & ASR-A502 series
 
 The [Advantech GMSL Input Module Card](https://www.advantech.com/en-eu/products/8d5aadd0-1ef5-4704-a9a1-504718fb3b41/mioe-gmsl/mod_fc1fc070-30f8-40c1-881f-56c967e26924) for [AFE-R360 series](https://www.advantech.com/en-eu/products/8d5aadd0-1ef5-4704-a9a1-504718fb3b41/afe-r360/mod_1e4a1980-9a31-46e6-87b6-affbd7a2cb44) and [ASR-A502 series](https://www.advantech.com/en-eu/products/8d5aadd0-1ef5-4704-a9a1-504718fb3b41/asr-a502/mod_ccca0f36-a50b-40c7-87b7-10fb96448605) may provide up to 6x GMSL camera interface (FAKRA universal type).
 
+<!--hide_directive
 ::::{tab-set}
-
-:::{tab-item} RealSense™ D457
+:::{tab-item} hide_directive--> RealSense™ D457
 
 Below an ACPI devices configure example for GMSL2 Intel® RealSense™ Depth Camera D457 :
 
@@ -165,9 +165,10 @@ Below an ACPI devices configure example for GMSL2 Intel® RealSense™ Depth Cam
 |Device1 I2C Address|42|44|42|44|
 |Device2 I2C Address|48|48|48|48|
 
+<!--hide_directive
 :::
 
-:::{tab-item} D3CMCXXX-115-084
+:::{tab-item} hide_directive--> D3CMCXXX-115-084
 
 Below an ACPI devices configure example for [D3 Embedded Discovery](https://www.d3embedded.com/product/isx031-smart-camera-narrow-fov-gmsl2-unsealed/) GMSL2 Camera module :
 
@@ -188,13 +189,13 @@ Below an ACPI devices configure example for [D3 Embedded Discovery](https://www.
 |Device1 I2C Address|42|44|
 |Device2 I2C Address|10|12|
 
-:::{attention}
-please note, on Advantech® AFE-R360 series the four D3CMCXXX ACPI configuration achieved by `PPR Unit=2` also requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+**Note**
+On Advantech® AFE-R360 series the four D3CMCXXX ACPI configuration achieved by `PPR Unit=2` also requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+
+<!--hide_directive
 :::
 
-:::
-
-:::{tab-item} D3CMCXXX-106-084
+:::{tab-item} hide_directive-->  D3CMCXXX-106-084
 
 Below an ACPI devices configure example for [D3 Embedded Discovery PRO](https://www.d3embedded.com/product/imx390-medium-fov-gmsl2-sealed/) GMSL2 Camera module :
 
@@ -215,13 +216,14 @@ Below an ACPI devices configure example for [D3 Embedded Discovery PRO](https://
 |Device1 I2C Address|42|44|
 |Device2 I2C Address|10|12|
 
-:::{attention}
-please note, on Advantech® AFE-R360 series the four D3CMCXXX ACPI configuration achieved by `PPR Unit=2` also requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+**Note**
+On Advantech® AFE-R360 series the four D3CMCXXX ACPI configuration achieved by `PPR Unit=2` also requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+
+
+<!--hide_directive
 :::
 
-:::
-
-:::{tab-item} oToCAM222
+:::{tab-item} hide_directive--> oToCAM222
 
 Below an ACPI devices configure example for [oToBrite® oToCAM222](https://www.otobrite.com/product/automotive-camera/isx021_gmsl2_otocam222-s195m) GMSL2 camera modules :
 
@@ -242,9 +244,10 @@ Below an ACPI devices configure example for [oToBrite® oToCAM222](https://www.o
 |Device1 I2C Address|18|19|18|19|
 |Device2 I2C Address|48|48|48|48|
 
+<!--hide_directive
 :::
 
-:::{tab-item} oToCAM223
+:::{tab-item} hide_directive--> oToCAM223
 
 Below an ACPI devices configure example for [oToBrite® oToCAM223](https://www.otobrite.com/product/automotive-camera/isx031_gmsl2_otocam223-s195m) GMSL2 camera modules :
 
@@ -265,9 +268,10 @@ Below an ACPI devices configure example for [oToBrite® oToCAM223](https://www.o
 |Device1 I2C Address|18|19|18|19|
 |Device2 I2C Address|48|48|48|48|
 
+<!--hide_directive
 :::
 
-::::
+:::: hide_directive-->
 
 ![gmsl adv mioe](../../images/gmsl/gmsl-adv-mioe.png)
 
@@ -290,21 +294,22 @@ Another example below illustrates how to configure ACPI devices 6x Intel® RealS
 |Device1 I2C Address|42|44|62|42|*64*|*44*|
 |Device2 I2C Address|48|48|48|4a|*48*|*4a*|
 
-:::{attention}
+**Note**
 For the time being each GMSL2 **Aggregated-link** Deserializer (e.g. MAX9296A) on the same I2C Channel shall set identical *Custom HID* and *Camera module label* tuple matching with GMSL2 Serializer and Camera Sensor devices type.
 
 The [Advantech GMSL Input Module Card](https://www.advantech.com/en-eu/products/8d5aadd0-1ef5-4704-a9a1-504718fb3b41/mioe-gmsl/mod_fc1fc070-30f8-40c1-881f-56c967e26924) for [AFE-R360 series](https://www.advantech.com/en-eu/products/8d5aadd0-1ef5-4704-a9a1-504718fb3b41/afe-r360/mod_1e4a1980-9a31-46e6-87b6-affbd7a2cb44) I2C1 Channel (ex. `INTC10CD`) **Aggregated-link** Deserializer (e.g. MAX9296A) i2c device `0x48` shall set *Custom HID* (ex. `INTC10CD`) and *Camera module label* (ex `d4xx`) tuple for both *GMSL Camera suffix* `a` and `g`, where the other  **Aggregated-link** Deserializer (e.g. MAX9296A) i2c device `0x4a` could have a different *Custom HID* (ex `INTC1031`) and *Camera module* label (ex `isx031`) tuple on both GMSL Camera suffix `e` and `k`.
 :::
 
+<!--hide_directive
 :::
 
-:::{tab-item} SEAVO® HB03
+:::{tab-item} hide_directive--> SEAVO® HB03
 
 The [SEAVO® Embedded Computer HB03](https://www.seavo.com/en/products/products-info_itemid_693.html) UEFI BIOS `Version: S1132C1133A11` allow admin user to configure up to 4x GMSL2 camera interface (FAKRA universal type).
 
+<!--hide_directive
 ::::{tab-set}
-
-:::{tab-item} RealSense™ D457
+:::{tab-item} hide_directive--> RealSense™ D457
 
 Below an ACPI devices configure example for GMSL2 Intel® RealSense™ Depth Camera D457 :
 
@@ -325,9 +330,10 @@ Below an ACPI devices configure example for GMSL2 Intel® RealSense™ Depth Cam
 |Device1 I2C Address|42|44|42|44|
 |Device2 I2C Address|48|48|48|48|
 
+<!--hide_directive
 :::
 
-:::{tab-item} D3CMCXXX-115-084
+:::{tab-item} hide_directive--> D3CMCXXX-115-084
 
 Below an ACPI devices configure example for [D3 Embedded Discovery](https://www.d3embedded.com/product/isx031-smart-camera-narrow-fov-gmsl2-unsealed/) GMSL2 Camera module :
 
@@ -348,13 +354,13 @@ Below an ACPI devices configure example for [D3 Embedded Discovery](https://www.
 |Device1 I2C Address|42|44|
 |Device2 I2C Address|10|12|
 
-:::{attention}
+**Note**
 please note, on Seavo® HB03 the four D3CMCXXX ACPI configuration achieved by `PPR Unit=2` also requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+
+<!--hide_directive
 :::
 
-:::
-
-:::{tab-item} D3CMCXXX-106-084
+:::{tab-item} hide_directive--> D3CMCXXX-106-084
 
 Below an ACPI devices configure example for [D3 Embedded Discovery PRO](https://www.d3embedded.com/product/imx390-medium-fov-gmsl2-sealed/) GMSL2 Camera module :
 
@@ -375,13 +381,13 @@ Below an ACPI devices configure example for [D3 Embedded Discovery PRO](https://
 |Device1 I2C Address|42|44|
 |Device2 I2C Address|10|12|
 
-:::{attention}
+**Note**
 please note, on Seavo® HB03 four D3CMCXXX ACPI configuration achieved by `PPR Unit=2` also requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+
+<!--hide_directive
 :::
 
-:::
-
-:::{tab-item} oToCAM222
+:::{tab-item} hide_directive--> oToCAM222
 
 Below an ACPI devices configure example for [oToBrite® oToCAM222](https://www.otobrite.com/product/automotive-camera/isx021_gmsl2_otocam222-s195m) GMSL2 camera modules :
 
@@ -402,9 +408,10 @@ Below an ACPI devices configure example for [oToBrite® oToCAM222](https://www.o
 |Device1 I2C Address|18|19|18|19|
 |Device2 I2C Address|48|48|48|48|
 
+<!--hide_directive
 :::
 
-:::{tab-item} oToCAM223
+:::{tab-item} hide_directive--> oToCAM223
 
 Below an ACPI devices configure example for [oToBrite® oToCAM223](https://www.otobrite.com/product/automotive-camera/isx031_gmsl2_otocam223-s195m) GMSL2 camera modules :
 
@@ -425,13 +432,13 @@ Below an ACPI devices configure example for [oToBrite® oToCAM223](https://www.o
 |Device1 I2C Address|18|19|18|19|
 |Device2 I2C Address|48|48|48|48|
 
+<!--hide_directive
 :::
 
-::::
+:::{tab-item} hide_directive-->
 
-:::{note}
+**Note**
 please note, GMSL2 *Aggregated-link* `SerDes` CSI-2 port 0 and 4 is purposely set to `LaneUsed = x4` to improve Intel® IPU6 DPHY signal-integrity problem on [SEAVO® Embedded Computer HB03](https://www.seavo.com/en/products/products-info_itemid_693.html) .
-:::
 
 ![gmsl seavo hb03](../../images/gmsl/gmsl-seavo-hb03.png)
 
@@ -441,15 +448,17 @@ For the time being each GMSL2 **Aggregated-link** Deserializer (e.g. MAX9296A) o
 The [SEAVO® Embedded Computer HB03](https://www.seavo.com/en/products/products-info_itemid_693.html) Add-in-Cards (AIC) I2C1 Channel  (ex. `INTC10CD`) **Aggregated-link** Deserializer (e.g. MAX9296A) i2c device `0x48` shall set *Custom HID* (ex. `INTC10CD`) and *Camera module label* (ex `d4xx`) tuple for both *GMSL Camera suffix* `a` and `g`, where the other  **Aggregated-link** Deserializer (e.g. MAX9296A) i2c device `0x4a` could have a different *Custom HID* (ex `INTC1031`) and *Camera module* label (ex `isx031`) tuple on both GMSL Camera suffix `e` and `k`.
 :::
 
+<!--hide_directive
 :::
 
-:::{tab-item} Axiomtek® ROBOX500
+:::{tab-item} hide_directive--> Axiomtek® ROBOX500
 
 The [Axiomtek ROBOX500](https://www.axiomtek.com/ROBOX500/) may provide either 4x GMSL or 8x GMSL camera interface (FAKRA universal type).
 
+<!--hide_directive
 ::::{tab-set}
 
-:::{tab-item} RealSense™ D457
+:::{tab-item} hide_directive--> RealSense™ D457
 
 Below an ACPI devices configure example for  4x Intel® RealSense™ Depth Camera D457 GMSL2 module :
 
@@ -470,9 +479,10 @@ Below an ACPI devices configure example for  4x Intel® RealSense™ Depth Camer
 |Device1 I2C Address|42|44|62|64|
 |Device2 I2C Address|48|4a|68|6c|
 
+<!--hide_directive
 :::
 
-:::{tab-item} D3CMCXXX-115-084
+:::{tab-item} hide_directive--> D3CMCXXX-115-084
 
 Below an ACPI devices configure example of four GMSL2 Camera module from [D3 Embedded Discovery](https://www.d3embedded.com/product/isx031-smart-camera-narrow-fov-gmsl2-unsealed/):
 
@@ -493,13 +503,13 @@ Below an ACPI devices configure example of four GMSL2 Camera module from [D3 Emb
 |Device1 I2C Address|42|44|62|64|
 |Device2 I2C Address|12|14|16|18|
 
-:::{attention}
+**Note**
 please note, on the *Axiomtek® ROBOX500* the 4x D3CMCXXX Camera ACPI configuration is achieved by `PPR Unit=1` requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+
+<!--hide_directive
 :::
 
-:::
-
-:::{tab-item} D3CMCXXX-106-084
+:::{tab-item} hide_directive--> D3CMCXXX-106-084
 
 Below an ACPI devices configure example of four GMSL2 Camera module from [D3 Embedded Discovery PRO](https://www.d3embedded.com/product/imx390-medium-fov-gmsl2-sealed/) :
 
@@ -520,13 +530,13 @@ Below an ACPI devices configure example of four GMSL2 Camera module from [D3 Emb
 |Device1 I2C Address|42|44|62|64|
 |Device2 I2C Address|12|14|16|18|
 
-:::{attention}
+**Note**
 please note, the D3CMCXXX ACPI configuration with `PPR Unit=2` requires setting `Device0` for GMSL2 **Aggregated-link** Deserializer I2C address (e.g. MAX9296A) and `Device2` for Sensors I2C address (e.g. ISX031).
+
+<!--hide_directive
 :::
 
-:::
-
-:::{tab-item} oToCAM222
+:::{tab-item} hide_directive--> oToCAM222
 
 Below an ACPI devices configure example for [oToBrite® oToCAM222](https://www.otobrite.com/product/automotive-camera/isx021_gmsl2_otocam222-s195m) GMSL2 camera modules :
 
@@ -547,9 +557,10 @@ Below an ACPI devices configure example for [oToBrite® oToCAM222](https://www.o
 |Device1 I2C Address|18|19|18|19|
 |Device2 I2C Address|48|4a|68|6c|
 
+<!--hide_directive
 :::
 
-:::{tab-item} oToCAM223
+:::{tab-item} hide_directive--> oToCAM223
 
 Below an ACPI devices configure example for [oToBrite® oToCAM223](https://www.otobrite.com/product/automotive-camera/isx031_gmsl2_otocam223-s195m) GMSL2 camera modules :
 
@@ -570,9 +581,10 @@ Below an ACPI devices configure example for [oToBrite® oToCAM223](https://www.o
 |Device1 I2C Address|18|19|18|19|
 |Device2 I2C Address|48|4a|68|6c|
 
+<!--hide_directive
 :::
-
 ::::
+hide_directive-->
 
 ![gmsl2 robox500](../../images/gmsl/gmsl2-robox500.jpg)
 
@@ -597,7 +609,8 @@ Another example below illustrates how to configure ACPI devices 8x Intel® RealS
 |Device1 I2C Address|42|44|62|64|*43*|*45*|*63*|*65*|
 |Device2 I2C Address|48|4a|68|6c|*48*|*4a*|*68*|*6c*|
 
+<!--hide_directive
 :::
-
 ::::
+hide_directive-->
 <!-- end -->
